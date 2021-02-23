@@ -12,7 +12,6 @@ public class View {
     }
 
     public String readExpression(){
-        writeMessage("Please enter an expression: ");
         return scanner.nextLine();
     }
 
