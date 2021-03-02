@@ -20,4 +20,8 @@ public enum Operators {
         }
         throw new InvalidInputException();
     }
+
+    public char getSign(){
+        return this.sign;
+    }
 }

@@ -32,8 +32,8 @@ public class Expression {
             throw new InvalidInputException();
         }
         String[] operand1AndOperator = separateOperand1AndOperator(temp[0]);
-        preprocessed[1] = operand1AndOperator[0];
-        preprocessed[0] = operand1AndOperator[1];
+        preprocessed[1] = operand1AndOperator[1];
+        preprocessed[0] = operand1AndOperator[0];
         preprocessed[2] = temp[1];
         return preprocessed;
     }
@@ -66,6 +66,7 @@ public class Expression {
                 return calculations.division(this.operand1, this.operand2);
             default:
                 throw new InvalidInputException();
+
         }
     }
 
@@ -75,12 +76,12 @@ public class Expression {
         stringBuilder.append(REGEX_PREFIX);
         for (int i = 0; i < operators.length; i++) {
             stringBuilder.append(REGEX_BEFORE_OPERATOR);
-            stringBuilder.append(operators[i]);
+            stringBuilder.append(operators[i].getSign());
             if (i < operators.length - 1) {
                 stringBuilder.append(REGEX_OR);
             }
         }
         stringBuilder.append(REGEX_POSTFIX);
-        return stringBuilder.toString();
+        return new String(stringBuilder);
     }
 }
