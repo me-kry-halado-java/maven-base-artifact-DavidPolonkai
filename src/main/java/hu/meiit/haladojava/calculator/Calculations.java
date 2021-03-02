@@ -1,27 +1,28 @@
 package hu.meiit.haladojava.calculator;
 
-
 public class Calculations {
 
-    private Calculations(){
+    public Calculations() {
         super();
     }
 
-
-    public static double addition(int a, int b){
-        return (double)a+b;
+    public double addition(int a, int b) {
+        return (double) a + b;
     }
 
-    public static double substraction(int a, int b){
-        return (double)a-b;
+    public double substraction(int a, int b) {
+        return (double) a - b;
     }
 
-    public static double multiplycation(int a, int b){
-        return (double)a*b;
+    public double multiplication(int a, int b) {
+        return (double) a * b;
     }
 
-    public static double division(int a, int b) throws ArithmeticException{
-        if (b==0) throw new ArithmeticException();
-        return (double)a/b;
+    public double division(int a, int b) {
+        if (b == 0) {
+            throw new ArithmeticException();
+        }
+        return (double) a / b;
     }
+
 }
