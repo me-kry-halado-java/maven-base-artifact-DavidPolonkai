@@ -2,10 +2,6 @@ package hu.meiit.haladojava.calculator;
 
 public class Calculations {
 
-    public Calculations() {
-        super();
-    }
-
     public double addition(int a, int b) {
         return (double) a + b;
     }
